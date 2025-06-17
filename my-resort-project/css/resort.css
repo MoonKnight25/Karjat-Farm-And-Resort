@@ -1,0 +1,471 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= Header ================= */
+.container {
+    min-height: 80px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1.2s ease-out;  /* Increased time and smoother easing */
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.contact-button {
+    background-color: #fff;
+    color: #43a047;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.contact-button:hover {
+    background-color: #d4efdf;
+    color: #1b5e20;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 60px;
+}
+
+.farmhouse-name h1 {
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+/* ================= Showcase Section ================= */
+.showcase {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.showcase video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.welcome-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= Gallery ================= */
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.gallery h2 {
+    margin-bottom: 1rem;
+    color: #2e7d32;
+}
+
+.gallery p {
+    margin-bottom: 1rem;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-images figure {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-images figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 0.8rem;
+    background-color: #f7f7f7;
+    text-align: left;
+}
+
+/* ================= Book Now ================= */
+.book-now {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* ================= Reviews ================= */
+.reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+.reviews h2 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.review {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review h4 {
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    color: #f1c40f;
+}
+
+/* ================= Services ================= */
+.services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services h2 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.services ul {
+    list-style: none;
+}
+
+.services li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* ================= Location ================= */
+.location {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.location h2 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+/* ================= Footer ================= */
+footer {
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn-footer {
+    font-size: 2.5rem;
+    color: white;
+    background-color: #25D366;
+    padding: 0.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    margin-top: 1rem;
+}
+
+.whatsapp-btn-footer:hover {
+    background-color: #1ebc59;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ================= WhatsApp Popup ================= */
+.whatsapp-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.whatsapp-popup p {
+    margin-bottom: 0.5rem;
+}
+
+.whatsapp-popup a {
+    background-color: white;
+    color: #25d366;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.whatsapp-popup a:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* ================= Mobile View (max-width: 500px) ================= */
+@media (max-width: 500px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .farmhouse-name h1 {
+        font-size: 1.1rem;
+    }
+
+    .contact-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0.2rem 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+}
+
+/* ================= Tablet View (min-width: 600px) ================= */
+@media (min-width: 600px) {
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* ================= Desktop View (min-width: 992px) ================= */
+@media (min-width: 992px) {
+    .container {
+        padding: 1.5rem 3rem;
+    }
+
+    .farmhouse-name h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 3.5rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-container {
+        padding: 0 3rem;
+    }
+}
